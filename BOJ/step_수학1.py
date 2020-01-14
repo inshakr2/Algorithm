@@ -85,3 +85,41 @@ else :
     mom = X - SUM(n-1)
     rem = n - (mom-1)
     print('{}/{}'.format(mom, rem))
+
+
+# 달팽이는 올라가고 싶다.
+    
+# time over
+A, B, V = map(int,input().split(' '))
+cn = 0
+height = 0
+while True:
+    cn += 1
+    height += A
+    if height >= V:
+        break
+    else:
+        height -= B
+print(cn)
+
+
+### SOLUTION
+V - A = H : 마지막날 전까지 올라가야할 높이
+H / (A-B) 의 몫 : 마지막 전날 까지 올라가야할 날짜, 
+            나머지 : 남은 높이
+
+- 나머지가 0이면, 정확히 나누어 떨어진다는 뜻이므로 몫 + 1 (마지막 날에 하루 더 A만큼 올라가면 되므로)
+- 나머지가 0이 아니라면, 이 나머지는 A-B값 보다 무조건 작다.
+    따라서 나머지는 처음 우리가 최초 높이에서 A를 빼주었기 때문에 최초 높이 기준에서
+    실제로 남은 높이는 A < 남은높이 < A + (A-B) 이다.
+    여기서 A를 빼준다고 해도 0 < 남은 높이 < (A-B) A-B 만큼 한번 올라가야하고,
+    올라가더라도 A만큼이 남아있기 때문에 A 만큼 한번더 올라가야하기 때문에
+    몫 + 2 를 해준다.
+    
+A, B, V = map(int,input().split(' ')) 
+day, remain = divmod((V - A), (A - B)) 
+if remain == 0:
+    print(day + 1)
+else :
+    print(day + 2)    
+
