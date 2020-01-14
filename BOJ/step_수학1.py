@@ -89,7 +89,7 @@ else :
 
 # 달팽이는 올라가고 싶다.
     
-# time over
+    ## time over
 A, B, V = map(int,input().split(' '))
 cn = 0
 height = 0
@@ -123,3 +123,26 @@ if remain == 0:
 else :
     print(day + 2)    
 
+
+
+# ACM 호텔
+N // H : 몇번째 W 인지? 나머지가 있으면, 몫 + 1 에 나머지 만큼 층이 올라감
+                           없으면, 몫에 H만큼 층이 올라감 
+                           몫은 방 번호
+case = int(input())
+H, W, N = map(int, input().split(' '))
+
+room_num, rem = divmod(N, H)
+
+if rem == 0:
+    print(H,room_num)
+else :
+    print(rem, room_num+1)
+ 
+
+
+if rem == 0:
+    print(str(H) + '0' + str(room_num) if room_num < 10 else str(room_num) )
+else :
+    room_num += 1
+    print(str(rem) + '0' + str(room_num) if room_num < 10 else str(room_num) )
