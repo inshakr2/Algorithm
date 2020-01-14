@@ -130,19 +130,70 @@ N // H : 몇번째 W 인지? 나머지가 있으면, 몫 + 1 에 나머지 만�
                            없으면, 몫에 H만큼 층이 올라감 
                            몫은 방 번호
 case = int(input())
-H, W, N = map(int, input().split(' '))
+for i in range(case):
+    H, W, N = map(int, input().split(' '))
+    
+    room_num, rem = divmod(N, H)
+    
+    if rem == 0:
+        print(str(H) + str(room_num).rjust(2,'0'))
+    else :
+        room_num += 1
+        print(str(rem) + str(room_num).rjust(2,'0'))
+        
 
-room_num, rem = divmod(N, H)
 
-if rem == 0:
-    print(H,room_num)
-else :
-    print(rem, room_num+1)
- 
+# 부녀회장이 될테야
+0 ~ 14 까지 정해져 있으니, 그냥 2차원 배열을 만들자.
+
+3층 1 4 10 20 35 ...
+2층 1 3 6  10 15 ... 
+1층 1 2 3  4  5  ... 14
+
+1층을 제외하고 규칙을 보면 우선    2층 2호는 2층 1호 + 1층 2호 
+                                3층 4호는 3층 3호 + 2층 4호
+즉 a층 b호는 a층 b-1호 + a-1층 b호 임을 알 수 있다.
+0 호는 없기 때문에 각 층의 0호가 0으로 되어있는것은 무관하다.
+
+case = int(input())
+apart = [[0] * 15 for i in range(15)]
+for i in range(1,15):
+    apart[0][i] = i
+for floor in range(1,15):
+    for room in range(1,15):
+        apart[floor][room] = apart[floor][room-1] + apart[floor-1][room]
+
+for i in range(case):
+    k = int(input())
+    n = int(input())
+    print(apart[k][n])
 
 
-if rem == 0:
-    print(str(H) + '0' + str(room_num) if room_num < 10 else str(room_num) )
-else :
-    room_num += 1
-    print(str(rem) + '0' + str(room_num) if room_num < 10 else str(room_num) )
+
+# Fly me to the Alpha Centauri
+제곱수 시점 다음부터 횟수가 1 증가.
+특정 제곱수를 n이라고 한다면 n 제곱수 + n회 까지는 2n 회 이동함.
+
+from math import sqrt, floor
+case = int(input())
+for i in range(case):
+    x, y = map(int,input().split(' '))
+    Distance = y - x
+    n = floor(sqrt(Distance))
+    if n * (n+1) > Distance :
+        print(2*n)
+    else :
+        print(2*n +1)
+    
+from math import sqrt, ceil
+case = int(input())
+for i in range(case):
+    x, y = map(int,input().split(' '))
+    Distance = y - x
+    n = ceil(sqrt(Distance))
+    if Distance > n * (n-1):
+        print(2*n -1)
+    else :
+        print(2*n -2)
+
+
