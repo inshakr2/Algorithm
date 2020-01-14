@@ -171,9 +171,17 @@ for i in range(case):
 
 
 # Fly me to the Alpha Centauri
-제곱수 시점 다음부터 횟수가 1 증가.
-특정 제곱수를 n이라고 한다면 n 제곱수 + n회 까지는 2n 회 이동함.
+하나씩 나열해보면 제곱수 시점에서 횟수가 1 증가한다.
+추가적으로 제곱수를 n 이라고 한다면, n^2 에서 n을 뺀 시점에서 또 횟수가 증가한다.
+우선 n^2에서 바로 전 시점까지의 횟수는 2n-1 이며
+n^2 - n 의 직전 시점에서는 2n - 2 이다.
 
+y - x 의 값, Distance만 알고 있다면 위 규칙을 따라서 손쉽게 구할 수 있다.
+Distance에 루트를 씌워 바로 다음의 제곱수를 찾는다. sqrt + ceil
+이것을 n 이라고 할 때, Distance가 n^2 - n 보다 큰지 작은지 확인한 뒤에
+공식에 집어넣어주면 된다.
+
+# 1. floor 했을 경우, 제곱수에 대한 규칙을 따로 조건 처리해야 해서 까다롭다.
 from math import sqrt, floor
 case = int(input())
 for i in range(case):
@@ -184,7 +192,8 @@ for i in range(case):
         print(2*n)
     else :
         print(2*n +1)
-    
+
+# 2. 정답
 from math import sqrt, ceil
 case = int(input())
 for i in range(case):
