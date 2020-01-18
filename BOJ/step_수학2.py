@@ -30,3 +30,34 @@ cnt = 0
 for i in test :
     cnt += Prime(i)
 print(cnt)
+
+
+# 소수
+# 위 함수를 활용
+# 미리 1 ~ 10000 까지의 소수를 찾아놓은 리스트를 만든 뒤 
+# 주어진 범위에서 가져오는 것이 더 효율적으로 보인다.
+def Prime(n):
+    if n <= 1:
+        pass
+    elif n <= 3:
+        return n
+    else :
+        D = 0
+        for i in range(2,n):
+            if n % i == 0:
+                D += 1
+        
+        if D == 0 :
+            return n
+
+
+N = int(input())
+M = int(input())
+res = list()
+for i in range(N, M+1):
+    if bool(Prime(i)) == True:
+        res.append(Prime(i))
+if sum(res) != 0 :
+    print(sum(res),min(res), sep='\n')
+else :
+    print(-1)
