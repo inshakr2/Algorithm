@@ -61,3 +61,42 @@ if sum(res) != 0 :
     print(sum(res),min(res), sep='\n')
 else :
     print(-1)
+    
+
+# 소수 구하기
+# 하나씩 확인해야하기 때문에 시간이 너무 많이 소요된다.
+import math
+def Prime(num):
+    if num==1:
+        return False
+    
+    n=int(math.sqrt(num))
+
+    for i in range(2,n+1):
+        if num%i==0:
+            return False
+    return True
+
+M, N = list(map(int,input().split(' ')))
+for i in range(M,N+1):
+    if Prime(i) == True:
+        print(i)    
+
+# 주어지는 값중 더 큰 값까지의 소수들을 모두 구한뒤 작은 값부터 소수를 출
+M, N = list(map(int,input().split(' ')))
+arr = [i for i in range(N+1)]
+arr[1] = 0
+for i in range(2,N+1):
+    if arr[i] == 0:
+        continue
+    for j in range(i*2,N+1,i):
+        arr[j] = 0
+prime = [i for i in range(M,N+1) if arr[i] == i]
+
+for i in prime:
+    if i >= M:
+        print(i)
+     
+        
+
+
