@@ -82,6 +82,7 @@ for i in range(M,N+1):
     if Prime(i) == True:
         print(i)    
 
+# 정답
 # 주어지는 값중 더 큰 값까지의 소수들을 모두 구한뒤 작은 값부터 소수를 출
 M, N = list(map(int,input().split(' ')))
 arr = [i for i in range(N+1)]
@@ -98,5 +99,21 @@ for i in prime:
         print(i)
      
         
+# 베르트랑 공준
+while True:
+    n = int(input())
+    N = 2 * n
+    if n == 0 :
+        break
+    else :
+        arr = [i for i in range(N+1)]
+        arr[1] = 0
+        for i in range(2,N+1):
+            if arr[i] == 0:
+                continue
+            for j in range(i*2,N+1,i):
+                arr[j] = 0
+        prime = [i for i in range(n+1,N+1) if arr[i] == i]
+        print(len(prime))
 
 
