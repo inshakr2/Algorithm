@@ -145,4 +145,12 @@ for i in range(case):
             if bool(arr[n-i]) :
                 print(i, n-i)
                 break
-    
+
+
+# 직사각형에서 탈출
+# 그림 설명이 필요,,
+# 각 거리는 네가지 경우가 있는데 각 경우 중에서 가장 수가 적은 값을 출력하면 그만~                
+
+x,y,w,h = map(int,input().split(' '))
+print(min(x,y,w-x,h-y))
+
