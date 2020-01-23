@@ -154,3 +154,24 @@ for i in range(case):
 x,y,w,h = map(int,input().split(' '))
 print(min(x,y,w-x,h-y))
 
+
+# 네 번째 점
+# 직사각형이니까, 모든좌표가 2번씩 등장해야한다!
+# list에 담고, 값이 한개인 것들을 찾아서 새로운 좌표로 잡는다.
+
+X = list()
+Y = list()
+for _ in range(3):
+    x,y = map(int,input().split(' '))
+    X.append(x)
+    Y.append(y)
+
+for i in X:
+    if X.count(int(i)) == 1:
+        new_x = int(i)
+
+for i in Y:
+    if Y.count(int(i)) == 1:
+        new_y = int(i)
+
+print(new_x, new_y)
