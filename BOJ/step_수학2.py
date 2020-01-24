@@ -175,3 +175,20 @@ for i in Y:
         new_y = int(i)
 
 print(new_x, new_y)
+
+
+# 직각 삼각형
+while True:
+    
+    long = sorted(list(map(int,input().split(' '))))
+    
+    if sum(long) == 0 :
+        break
+    elif long[-1] ** 2 == (long[0] ** 2) + (long[1] ** 2):
+        print('right')
+    else:
+        print('wrong')
+
+
+    
+
