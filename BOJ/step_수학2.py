@@ -199,3 +199,15 @@ while True:
     
     print('right' if a**2 + b**2 == c**2 else 'wrong')
 
+
+# 택시 기하학
+# https://blog.naver.com/ldw0811/221775830138
+
+import math
+
+a = int(input())
+
+v1 = a * a * math.pi
+v2 = (a * 2) * (a * 2) / 2
+print("%.6f" % v1)
+print("%.6f" % v2)
