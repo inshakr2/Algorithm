@@ -235,3 +235,50 @@ for i in range(case):
         print(2)
     else :
         print(-1)
+
+# 만나지 않는 경우, 큰 원의 안에 작은 원이 있을 때도 있다...   
+import math
+case = int(input())
+
+for i in range(case):
+    x1,y1,r1,x2,y2,r2 = map(int,input().split(' '))
+    
+    D = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    R = r1 + r2 
+    r = -(r2-r1) if r2 - r1 < 0 else r2 - r1
+    
+    if D < r or D > R :
+        print(0)
+    elif D == R or D == r:
+        print(1)
+    elif D > r and D < R:
+        print(2)
+    else :
+        print(-1)
+
+# 다시
+# https://blog.naver.com/rk9034/221273498295
+import math
+case = int(input())
+
+for i in range(case):
+    x1,y1,r1,x2,y2,r2 = map(int,input().split(' '))
+    
+    D = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    R = r1 + r2 
+    r = -(r2-r1) if r2 - r1 < 0 else r2 - r1
+    
+    if D == 0:
+        if r1 == r2 :
+            print(-1)
+        else :
+            print(0)
+    
+    else :
+        if D < R and D > r:
+            print(2)
+        elif (D == R) or (D == r):
+            print(1)
+        else :
+            print(0)
+            
