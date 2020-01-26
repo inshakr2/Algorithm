@@ -211,3 +211,27 @@ v1 = a * a * math.pi
 v2 = (a * 2) * (a * 2) / 2
 print("%.6f" % v1)
 print("%.6f" % v2)
+
+
+# 터렛
+# 좌표상 원 2개. 두 원의 접점의 갯수를 출력,
+# 점과 점 사이의 거리와를 D, 두 원의 반지름을 r1, r2라고 할 때
+# r1 + r2 < D 이건 만나지 않는 경우,
+# r1 + r2 = D 이건 한 점에서 만나는 경우
+# r1 + r2 > D 두 점에서 만나는 경우
+import math
+case = int(input())
+
+for i in range(case):
+    x1,y1,r1,x2,y2,r2 = map(int,input().split(' '))
+    
+    D = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    R = r1 + r2 
+    if R < D:
+        print(0)
+    elif R == D:
+        print(1)
+    elif R > D :
+        print(2)
+    else :
+        print(-1)
