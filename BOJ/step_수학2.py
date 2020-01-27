@@ -281,4 +281,4 @@ for i in range(case):
             print(1)
         else :
             print(0)
-            
+           
