@@ -30,7 +30,9 @@ print(fibonacci(int(input())))
 
 
 # 별찍기 10
+# https://hydroponicglass.tistory.com/28
     # 1
+    # https://has3ong.tistory.com/364
 def Star(x, y, num, matrix):
     if num == 1:
         matrix[x][y] = '*'
@@ -59,6 +61,7 @@ def solution():
 solution()
 
     # 2
+    # https://claude-u.tistory.com/146
 
 def stars(n):
     matrix=[]
