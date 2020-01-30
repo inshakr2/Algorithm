@@ -83,3 +83,26 @@ for i in range(k):
     star = stars(star)
 for i in star:
     print(i)
+    
+
+# 하노이 탑 이동 순서
+# https://leedakyeong.tistory.com/entry/%EB%B0%B1%EC%A4%80-python-11729%EB%B2%88-%ED%95%98%EB%85%B8%EC%9D%B4-%ED%83%91-%EC%9D%B4%EB%8F%99-%EC%88%9C%EC%84%9Chanoi-top-in-python
+# https://brenden.tistory.com/31
+def hanoi(N, From, By, To):
+    
+    if N == 1:
+        step.append([From,To])
+    else :
+        hanoi(N-1, From, To, By)
+        step.append([From,To])
+        hanoi(N-1, By, From, To)
+        
+step = []
+n = int(input())
+hanoi(n,1,2,3)
+
+print(len(step))
+print('\n'.join(([' '.join(str(element) for element in row) for row in step])))
+
+[element for row in step for element in row]
+[' '.join(str(element) for element in row) for row in step]
