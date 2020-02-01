@@ -54,3 +54,37 @@ for i in pick:
             res = sum(i)
 print(res)
 
+
+
+# 분해합
+# 처음 작성한 코드 (실패)            
+def constructor(a):
+    scope = len(a) * 9
+    for probe in range( int(a) - scope , int(a) + scope + 1 ):
+        s = 0
+        for element in str(probe):
+            s += int(element)
+            if probe + s == int(a):
+                return probe
+    return 0
+constructor('')
+
+# 수정한 코드 
+def constructor(N):
+    
+    minimum = N - len(str(N)) * 9
+    minimum = 1 if minimum < 1 else minimum
+    
+    for i in range(minimum, N):
+        
+        Sum = i
+        Sum += sum(map(int,str(i)))  # 이 부분으로 2중 for문 안돌려도 됬다.
+        
+        if Sum == N:
+            print(i)
+            return
+        
+    print(0)
+    
+constructor(int(input()))
+
