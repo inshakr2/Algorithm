@@ -78,7 +78,7 @@ def constructor(N):
     for i in range(minimum, N):
         
         Sum = i
-        Sum += sum(map(int,str(i)))  # 이 부분으로 2중 for문 안돌려도 됬다.
+        Sum += sum(map(int,str(i)))  # 이 부분으로 2중 for문 안돌려도 된다.
         
         if Sum == N:
             print(i)
