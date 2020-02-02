@@ -88,3 +88,22 @@ def constructor(N):
     
 constructor(int(input()))
 
+
+# 덩치
+# 자기보다 크고 무거운(둘 다 큰) 사람이 몇 명인지 쟤서 자기 등수만 정하면 된다. 
+# n명을 n-1번씩 전수 비교해보면 된다.
+
+N = int(input())
+st_arr = list()
+
+for _ in range(N):
+    weight, height = map(int,input().split(' '))
+    st_arr.append((weight,height))
+
+for i in st_arr:
+    rank = 1
+    for j in st_arr:
+        if i[0] < j[0] and i[1] < j[1]:
+            rank += 1
+    print(rank, end = ' ')
+    
