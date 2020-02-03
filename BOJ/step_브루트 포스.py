@@ -113,7 +113,15 @@ for i in st_arr:
 # 경우의 수가 두가지
 # W로 시작하는지 B로 시작하는지. 먼저 시작하는 것들이 좌표가 모두 짝수 일때 나온다.
 
-
+# 두개의 함수를 생성한다. 
+# 첫번째는 뒤에서 생성할 Whitboard 와 BlackBoard에서 각 좌표를 바꿔가며 비교하며
+# 틀린 값이 있을 경우 count 값이 1씩 증가하도록 만든다.
+# 두번 째 함수는 입력값으로 주어진 사격형 Board와 White / Black Board를 선언해주고
+# 각각 모든 경우의 8 * 8 체스판의 경우를 1번 함수에 넣어 준다
+# 이때 result값은 반복문이 진행되면서 가장 최소 값이 overwrite되도록 한다.
+# 최초 64 는 8*8 배열에서 모두다 바뀌어야할 때의 숫자다. 즉 최대값을 우선 넣어두고
+# overwrite 되도록 하였다.
+    
 
 
 def check_board(SQUARE, probe, move_x, move_y):
@@ -152,7 +160,7 @@ def check_bw():
         ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B']
     ]
     
-    result = 1048576
+    result = 64
     
     for i in range(N-7):
         for j in range(M-7):
@@ -162,3 +170,4 @@ def check_bw():
             result = min(result,W,B)
     
     print(result)
+check_bw()
