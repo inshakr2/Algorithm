@@ -107,3 +107,58 @@ for i in st_arr:
             rank += 1
     print(rank, end = ' ')
     
+
+
+# 체스판 다시 칠하기
+# 경우의 수가 두가지
+# W로 시작하는지 B로 시작하는지. 먼저 시작하는 것들이 좌표가 모두 짝수 일때 나온다.
+
+
+
+
+def check_board(SQUARE, probe, move_x, move_y):
+    cnt = 0
+    for i in range(8):
+        for j in range(8):
+            if SQUARE[move_x+i][move_y+j] != probe[i][j]:
+                cnt += 1
+    return cnt
+
+
+def check_bw():
+    
+    N, M = map(int,input().split())
+    square = [list(input()) for _ in range(N)]
+    
+    WhiteBoard = [
+        ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+        ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+        ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+        ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+        ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+        ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+        ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+        ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W']
+    ]
+
+    BlackBoard = [
+        ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+        ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+        ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+        ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+        ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+        ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'],
+        ['B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'],
+        ['W', 'B', 'W', 'B', 'W', 'B', 'W', 'B']
+    ]
+    
+    result = 1048576
+    
+    for i in range(N-7):
+        for j in range(M-7):
+            W = check_board(square, WhiteBoard, i, j)
+            B = check_board(square, BlackBoard, i, j)
+            
+            result = min(result,W,B)
+    
+    print(result)
