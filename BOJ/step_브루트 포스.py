@@ -171,3 +171,34 @@ def check_bw():
     
     print(result)
 check_bw()
+
+
+# 영화감독 숌
+
+# 문제 이해를 잘못함.
+# 최대 10,000까지만 시리즈를 만들면 되는 줄 알았는데 그게 아니라
+# 입력값이 최대 10,000
+N = int(input())
+
+arr = list()
+for i in range():
+    if str(i).count('666'):
+        arr.append(i)
+        
+print(arr[N-1])
+
+
+# 다시 만든 풀이
+# for문이 돌면서 인풋값 길이 만큼 생성됬을 때 while이 멈추도록 함
+N = int(input())
+i = 0
+arr = list()
+while True:
+    i += 1
+    
+    if str(i).count('666'):
+        arr.append(i)
+        
+    if len(arr) == N:
+        break
+print(arr[-1])
