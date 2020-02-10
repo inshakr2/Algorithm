@@ -107,3 +107,15 @@ ordered_nums = sorted(nums, reverse=True)
 
 for n in ordered_nums : 
     print(n, end="")
+    
+
+# 좌표 정렬하기
+N = int(input())
+arr = list()
+for _ in range(N):
+    arr.append(tuple(map(int,input().split(' '))))
+
+arr.sort(key = lambda x : (x[0],x[1]))
+for x,y in arr:
+    print(x,y)
+
