@@ -104,5 +104,3 @@ hanoi(n,1,2,3)
 print(len(step))
 print('\n'.join(([' '.join(str(element) for element in row) for row in step])))
 
-[element for row in step for element in row]
-[' '.join(str(element) for element in row) for row in step]
