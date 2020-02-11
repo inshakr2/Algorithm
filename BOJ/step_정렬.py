@@ -119,3 +119,19 @@ arr.sort(key = lambda x : (x[0],x[1]))
 for x,y in arr:
     print(x,y)
 
+
+# 좌표 정렬하기 2
+
+N = int(input())
+
+arr = list()
+for _ in range(N):
+    arr.append(tuple(map(int,input().split(' '))))
+
+arr.sort(key = lambda x : (x[1],x[0]))
+
+for x,y in arr:
+    print(x,y)
+
+
+
