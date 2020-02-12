@@ -134,4 +134,14 @@ for x,y in arr:
     print(x,y)
 
 
+# 단어 정렬
+N = int(input())
+arr = set()
+for i in range(N):
+    word = input()
+    _len = len(word)
+    arr.add((word,_len))
 
+list(arr).sort(key = lambda x : (x[1],x[0]))
+for i in arr:
+    print(i[0])
