@@ -20,7 +20,7 @@ for i in range(N-1):
         
             res.add(sum(pick,j))
 
-print(list(res)[-1])
+print(max(res))
 
 # 반례를 못찾겠다.
 # https://blog.naver.com/fhskf94kr/221383553649
