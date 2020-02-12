@@ -22,9 +22,10 @@ for i in range(N-1):
 
 print(max(res))
 
-# 반례를 못찾겠다.
-# https://blog.naver.com/fhskf94kr/221383553649
-# 
+# 반례
+# 3 10
+# 3 1 3 1 4
+# 연속된 카드뿐만 아니라 모든 경우의 수를 고려할 것
 
 N, M = map(int, input().split())
 card = list(map(int, input().split()))
@@ -45,7 +46,7 @@ print(res)
 import itertools
 N, M = map(int, input().split())
 card = list(map(int, input().split()))
-pick = itertools.combinations(num_list, 3)
+pick = itertools.combinations(card, 3)
 
 res = 0
 for i in pick:
