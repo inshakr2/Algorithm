@@ -135,6 +135,7 @@ for x,y in arr:
 
 
 # 단어 정렬
+    # first
 N = int(input())
 arr = set()
 for i in range(N):
@@ -145,7 +146,8 @@ for i in range(N):
 list(arr).sort(key = lambda x : (x[1],x[0]))
 for i in arr:
     print(i[0])
-    
+
+    # second
 N = int(input())
 arr = dict()
 for i in range(N):
@@ -160,11 +162,27 @@ for i in range(N):
 res = list()
 for i in arr.values():
     res.append(sorted(i))
-res1 = [' '.join(str(element) for element in row) for row in res]
-for i in res1:
-    if len(i) != 1:
-        temp = i.split(' ')
-        for j in temp:
-            print(j)
-    else:
-        print(i)
+    
+for i in [element for row in res for element in row]:
+    print(i)
+
+    # third
+    
+import operator
+N = int(input())
+arr = dict()
+for i in range(N):
+    word = input()
+    _len = len(word)
+    
+    if _len in arr.keys():
+        arr[_len].append(word)
+    else :
+        arr[_len] = [word]
+
+res = sorted(arr.items(), key = operator.itemgetter(0))
+for i in res:
+    for j in set(sorted(i[1])):
+        print(j)
+
+    
