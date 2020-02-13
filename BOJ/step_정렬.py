@@ -216,3 +216,19 @@ member.sort(key = lambda x : x[0])
 print('\n'.join([' '.join(str(element) for element in row) for row in member]))
 
 
+    # 시간 줄이기
+import operator
+
+N = int(input())
+member = dict()
+
+for _ in range(N):
+  age, name = input().split(' ')
+  age = int(age)
+  if age in member.keys():
+    member[age].append(name)
+  else :
+    member[age] = [name]
+
+for key, value in sorted(member.items(), key=operator.itemgetter(0)):
+  print(key, value) 
