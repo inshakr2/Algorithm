@@ -202,3 +202,17 @@ sort_voca_list.sort()
  
 for len_voca, voca in sort_voca_list:       # 리스트를 순환시켜 순서대로 출력
     print(voca)
+    
+    
+# 나이순 정렬
+N = int(input())
+member = list()
+
+for _ in range(N):
+  age, name = input().split(' ')
+  member.append((int(age), name))
+
+member.sort(key = lambda x : x[0])
+print('\n'.join([' '.join(str(element) for element in row) for row in member]))
+
+
