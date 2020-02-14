@@ -5,6 +5,7 @@ Created on Fri Feb 14 18:08:34 2020
 @author: ChangYeol
 """
 # N과 M 1
+# https://codedrive.tistory.com/194
 
 def sequence(stack,numbers,M):
     if len(stack)==M:
