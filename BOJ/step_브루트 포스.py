@@ -68,7 +68,7 @@ def constructor(a):
             if probe + s == int(a):
                 return probe
     return 0
-constructor('')
+constructor()
 
 # 수정한 코드 
 def constructor(N):
