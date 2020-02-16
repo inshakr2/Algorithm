@@ -44,6 +44,8 @@ def dfs(cnt):
 # 호출할 때의 인자는 재귀함수에서 현재 몇 자리를 찾았는지 확인할 때 사용한다.
 dfs(0)
 
+
+# 1
 def sequence(stack,numbers,M):
     if len(stack)==M:
         print(*stack)
@@ -66,7 +68,7 @@ for number in numbers:
         
         
 
-# 1
+# 2
         
 def go(N, M, count, line, excludes):
 	global arr
@@ -87,22 +89,6 @@ N, M = map(int, input().split(" "))
 arr = list(range(1, N+1))
 
 go(N, M, 0, "", ())
-
-
-# 2
-def make(result,a,b):
-    if b==0:
-        print(" ".join(map(str,result)))
-    else:
-        for i in a:
-            _result=result[:]
-            _a=a[:]
-            _a.remove(i)
-            _result.append(i)
-            make(_result,_a,b-1)
-
-n,m=map(int,input().split())
-make([],[i for i in range(1,n+1)],m)
 
 
 # 3
