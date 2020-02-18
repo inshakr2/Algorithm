@@ -131,3 +131,40 @@ solve(0, N, M)
 
 for i in out_all:
     print(i)
+
+
+# N과 M 3
+N, M = map(int, input().split())
+out = []
+
+def solve(depth, N, M):
+    if depth == M:
+        print(' '.join(map(str, out)))
+        return
+    for i in range(N):
+        out.append(i+1)
+        solve(depth+1, N, M)
+        out.pop()
+
+solve(0, N, M)
+    
+
+# N과 M 4
+def f(n,m,k,l):
+    if(n == k):
+        print(*res)
+        return
+    else:
+        for i in range(m):
+            if(arr[i] >= l):
+                visited[i] = 1
+                l = arr[i]
+                res[n] = arr[i]
+                f(n+1,m,k,l)
+                visited[i] = 0
+
+n, m = map(int, input().split())
+arr = range(1,n+1)
+visited = [0 for i in range(n)]
+res = [0] * m
+f(0,n,m,0)
