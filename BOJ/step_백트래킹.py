@@ -168,3 +168,74 @@ arr = range(1,n+1)
 visited = [0 for i in range(n)]
 res = [0] * m
 f(0,n,m,0)
+
+
+# N-Queens
+
+# 1
+# https://geonlee.tistory.com/40
+# https://codepractice.tistory.com/82
+def nqueen(sol, n):
+    
+    global count
+    
+    if len(sol) == n: # 정답 배열(sol)의 길이가 n과 같아지면, count 증가
+        count += 1
+        return 0
+    
+    candidate = list(range(n)) # 0부터 n-1까지를 후보 배열로 만든다.
+    
+    for i in range(len(sol)):
+        if sol[i] in candidate: # 같은 열에 있는 지 확인
+            candidate.remove(sol[i]) # 같은 열에 있다면 후보에서 제외
+            
+        distance = len(sol) - i
+        
+        if sol[i] + distance in candidate: # 같은 대각성 상(+)에 있는 지 확인
+            candidate.remove(sol[i] + distance) # 같은 대각선 상에 있다면 후보에서 제외
+            
+        if sol[i] - distance in candidate: # 같은 대각선 상(-)에 있는 지 확인
+            candidate.remove(sol[i] - distance) # 같은 대각선 상에 있다면 후보에서 제외
+            
+    if candidate != []:
+        for i in candidate:
+            sol.append(i) # 후보의 요소를 정답 배열의 i+1로 추가
+            nqueen(sol, n) # 재귀적으로 다음 행도 확인
+            sol.pop()
+    else:
+        return 0
+count = 0
+num = int(input())
+for i in range(num): # 첫 행의 경우의 수
+    nqueen([i], num)
+print(count)
+
+count = 0
+nqueen([8],8)
+print(count)
+
+# 2
+def isPromising(k, col): # k번째 row에서 Queen이 col번째 column에 놓을 수 있는지 (k-1번째 row까지) 검사하는 함수
+    for row in range(1, k): # 1번째 row부터 k-1번째 row까지 검사
+        if col == x[row] or abs(col - x[row]) == abs(k - row): # row번째 Queen과 놓으려는 Queen이 같은 직선이나 대각선 상에 있는 경우
+            return False # 해당 위치에는 Queen을 놓을 수 없음
+    return True # 위의 조건에 해당되지 않으면, Queen을 해당 위치에 놓을 수 있는 것임
+ 
+def nQueens(k): # 문제 해결을 위한 함수
+    global count # count변수는 전역 변수로 이용함
+    for col in range(1, N + 1): # 1번째 column부터 N번째 column까지 일일히 검사
+        if isPromising(k, col) == True: # k번째 row에서 col번째 column에 Queen을 놓을 수 있는 경우
+            x[k] = col # k번째 row에서 Queen의 위치는 col번째 column임
+            if k < N:
+                nQueens(k + 1) # 다음 row검사(nQueens함수 다시 호출)
+            else:
+                count += 1 # 가능한 방법의 수 증가
+ 
+count = 0 # 구하고자 하는 방법의 수
+N = int(input()) # 체스판의 크기(N x N에서 N)
+x = [0]*(n + 1) # x[1]부터 x[N]까지 사용을 하기 위해 배열 동적 할당
+nQueens(1) # 1번째 row부터 각 row와 column별로 검사하기 위해 nQueen(1)을 호출
+print(count)
+
+
+
