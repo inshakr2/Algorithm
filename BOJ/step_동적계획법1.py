@@ -35,7 +35,6 @@ for _ in range(n):
     
     
 # 01타일
-
 def tile001(n):
     answer = 0
     temp_1 = 1
