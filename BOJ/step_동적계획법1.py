@@ -34,6 +34,8 @@ for _ in range(n):
     print("%d %d" % (zero_count[m], one_count[m]))
     
     
+
+
 # 01타일
 def tile001(n):
     answer = 0
