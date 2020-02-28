@@ -54,3 +54,24 @@ def tile001(n):
     print(answer % 15746)
         
 tile001(int(input()))
+
+
+
+
+# 파도반 수열
+
+t = int(input())
+dp = [0 for _ in range(101)]
+
+def wave():
+    dp[1], dp[2], dp[3] = 1, 1, 1
+    dp[4], dp[5] = 2, 2
+    dp[6] = 3
+    for i in range(7, 101):
+        dp[i] = dp[i-1] + dp[i-5]
+    return
+
+for _ in range(t):
+    n = int(input())
+    wave()
+    print(dp[n])
