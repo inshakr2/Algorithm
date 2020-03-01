@@ -92,3 +92,20 @@ p = [[0]*3]+[list(map(int, input().split())) for _ in range(n)]
 solve()
 
 
+# 정수 삼각형
+triangle = int(input())
+triangle_matrix = []
+max_matrix = [[] for _ in range(triangle)]
+
+for _ in range(triangle):
+    triangle_matrix.append(list(map(int, input().split())))
+
+#역순으로 하위 항목을 모두 더한 최댓값을 저장
+for i in range(triangle - 1, -1, -1):
+    for j in range(len(triangle_matrix[i])):
+        if i == triangle - 1:
+            max_matrix[i].append(triangle_matrix[i][j])
+        else:
+            max_matrix[i].append(triangle_matrix[i][j] + max(max_matrix[i+1][j], max_matrix[i+1][j+1]))
+
+print(max_matrix[0][0])
