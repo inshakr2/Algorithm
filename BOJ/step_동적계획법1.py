@@ -109,3 +109,26 @@ for i in range(triangle - 1, -1, -1):
             max_matrix[i].append(triangle_matrix[i][j] + max(max_matrix[i+1][j], max_matrix[i+1][j+1]))
 
 print(max_matrix[0][0])
+
+
+# 계단 오르기
+# https://daimhada.tistory.com/181
+
+stairs = int(input())
+stair_list = [0]
+result = [[0, 0] for _ in range(stairs + 1)]
+
+for _ in range(stairs):
+    stair_list.append(int(input()))
+
+for i in range(1, stairs + 1):
+    if i == 1:
+        result[1][0] = stair_list[1]
+    elif i == 2:
+        result[2][0] = stair_list[1] + stair_list[2]
+        result[2][1] = stair_list[2]
+    else:
+        result[i][0] = max(result[i-3]) + stair_list[i-1] + stair_list[i]
+        result[i][1] = max(result[i-2]) + stair_list[i]
+
+print(max(result[stairs]))
