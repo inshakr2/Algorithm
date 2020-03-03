@@ -113,7 +113,7 @@ print(max_matrix[0][0])
 
 # 계단 오르기
 # https://daimhada.tistory.com/181
-
+# https://this-programmer.com/entry/%EB%B0%B1%EC%A4%802579%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B3%84%EB%8B%A8-%EC%98%A4%EB%A5%B4%EA%B8%B0
 stairs = int(input())
 stair_list = [0]
 result = [[0, 0] for _ in range(stairs + 1)]
@@ -132,3 +132,25 @@ for i in range(1, stairs + 1):
         result[i][1] = max(result[i-2]) + stair_list[i]
 
 print(max(result[stairs]))
+
+
+
+    # 참고 
+stair_count = int(input())
+stair_scores_list = list()
+stair_scores_list.append(0)
+
+for i in range(stair_count):
+    stair_scores_list.append(int(input()))
+
+sum_of_score = list()
+sum_of_score.append(0)
+sum_of_score.append(stair_scores_list[1])
+sum_of_score.append(stair_scores_list[1] + stair_scores_list[2])
+sum_of_score.append(max(stair_scores_list[3] + stair_scores_list[1], stair_scores_list[3] + stair_scores_list[2]))
+
+for i in range(4, stair_count + 1):
+    sum_of_score.append(max(stair_scores_list[i] + sum_of_score[i - 2],
+                            stair_scores_list[i] + stair_scores_list[i - 1] + sum_of_score[i - 3]))
+
+print(sum_of_score[-1])
