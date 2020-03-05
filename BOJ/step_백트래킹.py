@@ -365,3 +365,6 @@ for team in p:
     ans=abs(Synergy_link-Synergy_start)
     answer.append(ans)
 print(min(answer))
+
+
+
