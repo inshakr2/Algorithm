@@ -345,3 +345,16 @@ for i in range(len(A)):
             arr[j+1][i+1] = max(arr[j][i+1], arr[j+1][i])
 
 print(answer)
+
+
+# 연속합
+n = int(input())
+num_list = list(map(int, input().split()))
+temp = [0 for _ in range(n)]
+result = -1001
+
+for i in range(n):
+    temp[i] = max(temp[i-1] + num_list[i], num_list[i])
+    result = max(result, temp[i])
+        
+print(result)
