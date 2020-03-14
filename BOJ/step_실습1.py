@@ -11,3 +11,4 @@ for i in range(5):
         score_list.append(40)
 print(round(sum(score_list)/5))
 
+
