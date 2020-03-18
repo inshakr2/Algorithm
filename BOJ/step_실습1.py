@@ -44,3 +44,22 @@ for i in range(N-1, 0, -1):
 
 for i in range(N):
     print(' '*(N-i-1) + ('*'*(2*i+1)))
+    
+    
+# 별찍기 21 
+N = int(input())
+
+if N == 1:
+    print('*')
+    
+else:
+    if N % 2 == 0:
+        a = '* ' * (N//2)
+        b = ' *' * (N//2)
+    else:
+        a = '* ' * (N//2) + '*'
+        b = ' *' * (N//2)
+    
+    for _ in range(N):
+        print(a)
+        print(b)
