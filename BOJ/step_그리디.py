@@ -60,3 +60,17 @@ for meet in meeting:
         max_meeting += 1
         
 print(max_meeting)
+
+
+
+# 잃어버린 괄호
+
+example = input().split('-') #1 
+result = 0 
+for i in example[0].split('+') : #2 
+    result += int(i) #3 
+    
+for i in example[1:] : #4 
+    for j in i.split('+'): #5 
+        result -= int(j) #6
+
