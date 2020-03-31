@@ -35,3 +35,17 @@ a = list(map(int, input().split()))
 a_max = max(a)
 a_min = min(a)
 print(a_max * a_min)
+
+
+
+# 소인수분해
+
+N = int(input())
+i = 2
+
+while N != 1:
+    if N % i == 0:
+        N = N/i
+        print(i)
+    else:
+        i += 1
