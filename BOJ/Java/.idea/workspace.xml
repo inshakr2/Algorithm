@@ -27,7 +27,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Java_10171">
+    <configuration name="Java_10171" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_10171" />
+      <module name="Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="java_2557" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="java_2557" />
       <module name="Java" />
@@ -37,6 +44,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Java_10171" />
         <item itemvalue="Application.java_2557" />
       </list>
     </recent_temporary>
@@ -59,10 +67,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="655" y="149" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585751427574" />
-    <state x="408" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1585751468590">
+    <state x="408" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1585835631990">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="408" y="220" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585751468590" />
+    <state x="408" y="220" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585835631990" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
