@@ -26,10 +26,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Java_10171">
+  <component name="RunManager" selected="Application.Java_10172">
     <configuration name="Java_10171" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Java_10171" />
+      <module name="Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Java_10172" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_10172" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -44,6 +52,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Java_10172" />
         <item itemvalue="Application.Java_10171" />
         <item itemvalue="Application.java_2557" />
       </list>
@@ -63,10 +72,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="655" y="149" key="FileChooserDialogImpl" timestamp="1585751427574">
+    <state x="655" y="149" key="FileChooserDialogImpl" timestamp="1585836231145">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="655" y="149" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585751427574" />
+    <state x="655" y="149" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585836231145" />
+    <state width="1342" height="190" key="GridCell.Tab.0.bottom" timestamp="1585840364020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585840364020" />
+    <state width="1342" height="190" key="GridCell.Tab.0.center" timestamp="1585840364020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="190" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585840364020" />
+    <state width="1342" height="190" key="GridCell.Tab.0.left" timestamp="1585840364020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="190" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585840364020" />
+    <state width="1342" height="190" key="GridCell.Tab.0.right" timestamp="1585840364020">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1342" height="190" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1585840364020" />
     <state x="408" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1585835631990">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
