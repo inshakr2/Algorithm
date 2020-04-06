@@ -2,10 +2,13 @@ import java.util.Scanner;
 
 public class Java_1000 {
     public static void main(String[] args) {
-        Scanner data = new Scanner(System.in);
+        int a;
+        int b;
+        try (Scanner data = new Scanner(System.in)) {
 
-        int a = data.nextInt();
-        int b = data.nextInt();
+            a = data.nextInt();
+            b = data.nextInt();
+        }
 
         System.out.println(a + b);
     }
