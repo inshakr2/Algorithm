@@ -26,10 +26,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Application.Java_1001">
+  <component name="RunManager" selected="Application.Java_10998">
     <configuration name="Java_1000" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Java_1000" />
       <module name="Java" />
@@ -58,8 +58,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java_2557" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java_2557" />
+    <configuration name="Java_10998" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_10998" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -67,11 +67,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Java_10998" />
         <item itemvalue="Application.Java_1001" />
         <item itemvalue="Application.Java_10172" />
         <item itemvalue="Application.Java_1000" />
         <item itemvalue="Application.Java_10171" />
-        <item itemvalue="Application.java_2557" />
       </list>
     </recent_temporary>
   </component>
