@@ -4,11 +4,12 @@ public class Java_2588 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int a = input.nextInt();
-        String b = input.next();
+        int b = input.nextInt();
 
-        for (int i = b.length(); i < 1; i--){
-            a * b[i]
-
-        }
+        System.out.println(a * (b%10));
+        System.out.println(a* ((b/10)%10));
+        System.out.println(a* (b/100));
+        System.out.println(a*b);
     }
+
 }
