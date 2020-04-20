@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/입출력과 사칙연산" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/IF" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FOR" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
