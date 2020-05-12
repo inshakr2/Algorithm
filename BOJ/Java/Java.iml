@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/IF" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/FOR" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/While" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/실습1" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
