@@ -32,7 +32,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Application.Java_1110">
+  <component name="RunManager" selected="Application.Java_5543">
     <configuration name="Java_10871" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Java_10871" />
       <module name="Java" />
@@ -61,8 +61,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Java_2438" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Java_2438" />
+    <configuration name="Java_5543" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Java_5543" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -70,11 +70,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Java_5543" />
         <item itemvalue="Application.Java_1110" />
         <item itemvalue="Application.Java_10951" />
         <item itemvalue="Application.Java_10871" />
         <item itemvalue="Application.Java_10952" />
-        <item itemvalue="Application.Java_2438" />
       </list>
     </recent_temporary>
   </component>
@@ -148,10 +148,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="305" y="50" key="SettingsEditor/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1586097080073" />
-    <state x="408" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1589291076507">
+    <state x="408" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1589365740903">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="408" y="220" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1588935196996" />
+    <state x="408" y="220" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1589365740903" />
     <state x="408" y="220" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589291076507" />
   </component>
   <component name="XDebuggerManager">
